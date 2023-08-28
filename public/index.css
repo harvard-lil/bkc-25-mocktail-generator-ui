@@ -1,0 +1,190 @@
+* {
+  padding: 0px;
+  margin: 0px;
+  box-sizing: border-box;
+}
+
+:root {
+  --main-color: rgb(10, 10, 10);
+  --main-color-: rgb(30, 30, 30);
+  --main-color--: rgb(50, 50, 50);
+  --main-color---: rgb(100, 100, 100);
+  
+  --opposite-color: rgb(255, 255, 255);
+  --opposite-color-: rgb(240, 240, 240);
+  --opposite-color--: rgb(225, 225, 225);
+
+  --special-color: #ff00ff;
+  --special-color-: #c500c5;
+  --special-color--: #8e008e;
+  --special-color---: #650065;
+  --special-color----: #2f002f;
+
+  --font-family: system-ui,-apple-system,"Segoe UI","Roboto","Ubuntu","Cantarell","Noto Sans",sans-serif,"Apple Color Emoji","Segoe UI Emoji","Segoe UI Symbol","Noto Color Emoji"; 
+}
+
+html {
+  font-size: 18px;
+  font-size: clamp(18px, 1.35vmax, 32px);
+  font-family: var(--font-family);
+  color: var(--main-color);
+}
+
+body {
+  min-height: 100svh;
+  padding: 1rem;
+  padding-top: 2rem;
+  background: linear-gradient(48deg, rgba(255,255,255,1) 0%, rgba(245,245,245,1) 65%, rgba(200, 27, 216, 0.17) 100%);
+}
+
+hr {
+  width: 25ch;
+  margin: auto;
+  margin-top: 1rem;
+  border: 0px;
+  border-bottom: 4px solid var(--special-color-);
+}
+
+button {
+  display: inline-block;
+  padding: 0.65rem;
+  border-radius: 0.25rem;
+  color: var(--opposite-color);
+  background-color: var(--special-color-);
+  border: 0px;
+  font-weight: bold;
+  font-size: 1rem;
+  margin-right: 0.25rem;
+  font-family: var(--font-family);
+  transition: background-color 0.35s ease-in-out;
+  cursor: pointer;
+}
+
+button:hover {
+  background-color: var(--special-color--);
+}
+
+button:disabled {
+  cursor: not-allowed;
+  opacity: 0.7;
+}
+
+header {
+  text-align: center;
+  margin-bottom: 2rem;
+  position: relative;
+}
+
+header .spinner {
+  width: 2rem;
+  position: absolute
+}
+
+header h1 {
+  margin-bottom: 0.5rem;
+}
+
+header p {
+  color: var(--main-color--);
+}
+
+header img {
+  display: block;
+  margin: auto;
+  max-height: 10rem;
+  margin-bottom: 0.75rem;
+}
+
+header img.loading {
+  display: none;
+}
+
+form {
+  max-width: 50ch;
+  margin: auto;
+}
+
+form hr {
+  margin-top: 1rem;
+}
+
+form fieldset {
+  border: 0px;
+  display: block;
+  margin-bottom: 1rem;
+}
+
+form fieldset label {
+  display: block;
+  margin-bottom: 0.5rem;
+  font-weight: bold;
+}
+
+form input, form textarea, form select {
+  display: block;
+  width: 100%;
+  padding: 0.5rem;
+  font-size: 1rem;
+  font-family: var(--font-family);
+  background-color: var(--opposite-color);
+  border: 1px solid var(--opposite-color--);
+  border-radius: 0.25rem;
+}
+
+form select {
+  appearance: none;
+}
+
+form textarea {
+  min-height: 5rem;
+  line-height: 1.55rem;
+}
+
+form textarea:disabled {
+  background-color: var(--opposite-color-);
+}
+
+dialog[open] {
+  display: flex;
+  margin: auto;
+  border: 0px;
+  padding: 1rem;
+  background-color: var(--opposite-color);
+  border-radius: 0.25rem;
+  width: 90%;
+  max-width: 50ch;
+}
+
+dialog div {
+  width: 100%;
+}
+
+dialog div > * {
+  margin-bottom: 0.5rem;
+}
+
+dialog div textarea {
+  display: block;
+  width: 100%;
+  min-height: 20rem;
+  padding: 0.5rem;
+  font-size: 1rem;
+  font-family: var(--font-family);
+  background-color: var(--opposite-color);
+  border: 1px solid var(--opposite-color--);
+  border-radius: 0.25rem;
+  line-height: 1.55rem;
+}
+
+dialog::backdrop {
+  background-color: rgba(30, 30, 30, 0.35);
+}
+
+footer {
+  text-align: center;
+  padding-top: 2rem;
+}
+
+footer img {
+  max-width: 18ch;
+}
